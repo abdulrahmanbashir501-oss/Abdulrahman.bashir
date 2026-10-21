@@ -1,117 +1,538 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="الموقع الشخصي Abdulrahman bashir">
-<title>Abdulrahman Bashir | websites </title>
-<style>
-:root{--bg:#050914;--panel:#0b1426;--text:#f4f7ff;--muted:#aab6d3;--blue:#00c8ff;--purple:#8a35ff;--line:#1c2b49}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:radial-gradient(ellipse at 75% 5%,#102b61 0,transparent 38%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
-.nav{position:sticky;top:0;z-index:10;background:#050914e8;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff12}.navin{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-size:1.15rem;font-weight:900;white-space:nowrap}.brand b{color:var(--blue);text-shadow:0 0 18px #00c8ff80}.links{display:flex;gap:18px;color:var(--muted);font-size:.9rem}.links a:hover{color:var(--blue)}.tools{display:flex;gap:7px}.toggle,.menu{border:1px solid var(--line);background:#0b1426;color:white;border-radius:12px;padding:8px 11px;cursor:pointer}.mobile{display:none}
-.hero{min-height:580px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding:55px 0 70px}.eyebrow{color:var(--blue);font-weight:bold}.hero h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.15;margin:12px 0}.gradient{background:linear-gradient(90deg,var(--blue),#a66bff 75%);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:560px;color:var(--muted);font-size:1.05rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;border-radius:13px;padding:11px 19px;font-weight:bold;border:1px solid #ffffff20;transition:.2s;cursor:pointer;color:var(--text)}.btn:hover{transform:translateY(-2px)}.btn.primary{background:linear-gradient(110deg,var(--purple),#087bff);box-shadow:0 8px 28px #3c40ff35}.btn.ghost{background:#0b1426}.scene{height:370px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#a9f5ff,#207dff 27%,#5d18c5 58%,#080c20 75%);filter:drop-shadow(0 0 45px #5b31ff75);animation:float 6s ease-in-out infinite}.orb:after{content:'';position:absolute;inset:-25px;border:1px solid #35caff70;border-radius:50%;transform:rotateX(68deg) rotateZ(-20deg)}.glass{position:relative;width:min(320px,90%);padding:24px;border:1px solid #5ccaff6b;border-radius:24px;background:linear-gradient(140deg,#182d51e8,#080e20ef);box-shadow:0 30px 80px #0009,inset 0 0 35px #427bff19;backdrop-filter:blur(10px);text-align:center}.avatar{width:154px;height:154px;margin:0 auto 14px;border-radius:50%;overflow:hidden;border:3px solid var(--blue);box-shadow:0 0 25px #00c8ff45;background:#101d33;display:grid;place-items:center;font-size:3.6rem;font-weight:900;color:#e7fbff}.avatar img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}.glass h3{margin:8px 0 0;font-size:1.05rem}.glass p{font-size:.9rem;margin:0;color:var(--muted)}.floatlabel{position:absolute;background:#0d1a31;border:1px solid #31517a;border-radius:12px;padding:7px 12px;box-shadow:0 10px 35px #0008}.fl1{top:25px;right:0}.fl2{bottom:30px;left:0}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-section{padding:72px 0;border-top:1px solid #ffffff10}.section-title{text-align:center;margin:0 0 10px;font-size:2rem}.sub{text-align:center;color:var(--muted);margin:0 auto 32px;max-width:680px}.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{border:1px solid var(--line);background:linear-gradient(145deg,#0d192d,#080e1b);border-radius:20px;padding:23px;box-shadow:0 18px 50px #0002}.card h3{margin-top:0}.card p{color:var(--muted)}.stats{display:flex;gap:12px;margin-top:20px}.stat{flex:1;background:#101d33;border-radius:13px;padding:12px;text-align:center}.stat strong{display:block;font-size:1.3rem;color:var(--blue)}.skills{display:grid;grid-template-columns:1fr 1fr;gap:16px}.skilltop{display:flex;justify-content:space-between;gap:12px}.bar{height:9px;background:#1a2946;border-radius:10px;overflow:hidden;margin-top:10px}.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--purple),var(--blue));border-radius:10px}.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.project{overflow:hidden;padding:0;transition:.25s}.project:hover{transform:translateY(-5px);border-color:#00c8ff80}.projectart{height:145px;display:grid;place-items:center;font-size:3.2rem;background:radial-gradient(circle at 50% 30%,#254f91,#10172f 60%,#090e1c)}.project:nth-child(2) .projectart{background:radial-gradient(circle at 50% 30%,#6338a5,#17142f 60%,#090e1c)}.project:nth-child(3) .projectart{background:radial-gradient(circle at 50% 30%,#087b8f,#10172f 60%,#090e1c)}.projectbody{padding:17px}.projectbody p{font-size:.92rem}.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{font-size:.75rem;border-radius:20px;background:#172644;color:#c7d8ff;padding:4px 10px}
-.cert-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.cert-card{overflow:hidden;padding:0}.cert-thumb{height:190px;background:#101a2e;display:grid;place-items:center;overflow:hidden}.cert-thumb img{width:100%;height:100%;object-fit:contain;cursor:zoom-in}.cert-placeholder{font-size:3rem}.cert-body{padding:16px}.cert-body h3{margin:0 0 5px}.cert-body p{margin:0;color:var(--muted);font-size:.9rem}.cert-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.cert-actions .btn{padding:7px 11px;font-size:.85rem}
-.contactgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}.contactlist{color:var(--muted)}.contactlist p{margin:10px 0}.form{display:grid;gap:12px}.form input,.form textarea{width:100%;background:#060c19;border:1px solid #263654;color:white;padding:13px;border-radius:12px;outline:none}.form input:focus,.form textarea:focus{border-color:var(--blue)}.form textarea{min-height:125px;resize:vertical}.socials{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.socials a{padding:7px 11px;border:1px solid #29466d;border-radius:10px;color:var(--blue);font-size:.9rem}.foot{padding:25px 0;text-align:center;color:var(--muted);font-size:.88rem;border-top:1px solid #ffffff10}
-.modal{position:fixed;inset:0;background:#020510ed;z-index:99;display:none;align-items:center;justify-content:center;padding:14px}.modal.show{display:flex}.box{width:min(800px,100%);max-height:94vh;overflow:auto;background:#0b1426;border:1px solid #31517a;border-radius:20px;padding:21px;box-shadow:0 25px 90px #000b}.box h2{margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.box label{display:block;font-size:.9rem;color:#cbd8f4;margin:7px 0}.box input:not([type=checkbox]),.box textarea{width:100%;padding:10px;border-radius:9px;border:1px solid #304361;background:#050b18;color:#fff}.box textarea{min-height:80px}.admin-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.note{color:#9fb3d8;font-size:.86rem}.danger{background:#6c1830!important}.preview{width:112px;height:112px;border-radius:50%;object-fit:cover;border:2px solid var(--blue);display:block;margin:10px 0}.admin-cert{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:9px 0}.hidden{display:none!important}
-body.light{--bg:#eef4ff;--text:#0c1830;--muted:#52627f;--line:#d2def2;background:radial-gradient(ellipse at 75% 5%,#d4e4ff 0,transparent 38%),var(--bg)}body.light .nav{background:#eef4ffed}body.light .card,body.light .glass,body.light .toggle,body.light .btn.ghost{background:#fff;color:var(--text)}body.light .stat,body.light .tag{background:#e0eaff;color:#21395e}body.light .form input,body.light .form textarea{background:#fff;color:#111}
-@media(max-width:850px){.links{display:none;position:absolute;top:72px;left:0;right:0;padding:17px 5%;background:#050914f7;flex-direction:column;gap:10px}.links.open{display:flex}.mobile{display:block}.hero{grid-template-columns:1fr;text-align:center;padding-top:35px}.hero p{margin-inline:auto}.actions{justify-content:center}.scene{height:330px;grid-row:1}.orb{width:220px;height:220px}.aboutgrid,.contactgrid{grid-template-columns:1fr}.projects,.cert-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.skills{grid-template-columns:1fr}.navin{flex-wrap:wrap}.brand{font-size:1rem}}
-@media(max-width:520px){.projects,.cert-grid{grid-template-columns:1fr}.navin{min-height:64px}.links{top:64px}.hero{min-height:auto}.scene{height:290px}.glass{width:270px}.avatar{width:140px;height:140px}.floatlabel{font-size:.8rem}.stats .stat{min-width:28%}.grid{grid-template-columns:1fr}.box{padding:15px}.section-title{font-size:1.65rem}}
-</style>
-</head>
-<body>
-<header class="nav"><div class="wrap navin">
-<a class="brand" href="#home"><b>AB</b> <span id="brandName">Abdulrahman Bashir</span></a>
-<nav class="links" id="links"><a href="#home">الرئيسية</a><a href="#about">من أنا</a><a href="#skills">مهاراتي</a><a href="#projects">مشاريعي</a><a href="#certificates">شهاداتي</a><a href="#contact">تواصل معي</a></nav>
-<div class="tools"><button class="toggle" id="theme" aria-label="تغيير المظهر">☀️</button><button class="toggle" id="adminOpen">⚙️ الإعدادات</button><button class="menu mobile" id="menu" aria-label="فتح القائمة">☰</button></div>
-</div></header>
-<main>
-<section class="wrap hero" id="home" style="border:0"><div>
-<div class="eyebrow">✦ أهلاً بيك في عالمي الرقمي</div><h1>أنا <span class="gradient" id="displayName">Abdulrahman Bashir</span></h1>
-<h2 style="font-size:1.25rem;margin:0">مبدع المستقبل <span class="gradient">|</span> صانع أفكار</h2>
-<p>بحب التكنولوجيا والتصميم وصناعة التجارب الرقمية. دي مساحتي أعرض فيها أفكاري ومشاريعي، وكل حاجة بتعلمني حاجة جديدة.</p>
-<div class="actions"><a class="btn primary" href="#projects">شوف مشاريعي ↙</a><a class="btn ghost" href="#contact">تواصل معايا ✉</a></div>
-</div><div class="scene"><div class="orb"></div><div class="glass"><div class="avatar" id="heroAvatar"><span>AB</span></div><h3 id="heroName">ABDULRAHMAN BASHIR</h3><p>Dream · Code · Create</p></div><div class="floatlabel fl1">🚀 أفكار بلا حدود</div><div class="floatlabel fl2">💡 دايمًا بتعلّم</div></div></section>
-<section id="about"><div class="wrap"><h2 class="section-title">مين أنا؟ <span class="gradient">👋</span></h2><p class="sub">كل فكرة كبيرة بتبدأ بخطوة صغيرة، وده المكان اللي بحوّل فيه الخيال لحاجة ملموسة.</p><div class="aboutgrid">
-<article class="card"><h3>✨ نبذة عني</h3><p id="aboutText">أنا عبدالرحمن بشير. دي مساحتي الشخصية لعرض معلوماتي ومشاريعي وشهاداتي وإنجازاتي.</p><p>الموقع ده بداية تقدر تطورها وتضيف لها إنجازاتك الحقيقية مع الوقت.</p></article>
-<article class="card"><h3>🎯 هدفي</h3><p>أجمع بين الإبداع والتكنولوجيا عشان أصنع حاجات مفيدة، شكلها جميل وتجربتها سهلة على كل الأجهزة.</p><div class="stats"><div class="stat"><strong>∞</strong>أفكار</div><div class="stat"><strong>24/7</strong>فضول</div><div class="stat"><strong>🚀</strong>طموح</div></div></article>
-</div></div></section>
-<section id="skills"><div class="wrap"><h2 class="section-title">مهاراتي واهتماماتي</h2><p class="sub">عدّل النسب حسب مستواك الحقيقي.</p><div class="skills">
-<div class="card"><div class="skilltop"><b>تصميم واجهات UI/UX</b><span>85%</span></div><div class="bar"><span style="width:85%"></span></div></div>
-<div class="card"><div class="skilltop"><b>تطوير مواقع الويب</b><span>80%</span></div><div class="bar"><span style="width:80%"></span></div></div>
-<div class="card"><div class="skilltop"><b>أفكار ومشاريع إبداعية</b><span>90%</span></div><div class="bar"><span style="width:90%"></span></div></div>
-<div class="card"><div class="skilltop"><b>تصميم 3D وتجارب تفاعلية</b><span>70%</span></div><div class="bar"><span style="width:70%"></span></div></div>
-</div></div></section>
-<section id="projects"><div class="wrap"><h2 class="section-title">مشاريعي <span class="gradient">⚡</span></h2><p class="sub">نماذج تقدر تستبدلها بمشاريعك الفعلية لما تكون جاهزة.</p><div class="projects">
-<article class="card project"><div class="projectart">🌐</div><div class="projectbody"><h3>موقعي الشخصي</h3><p>مساحة رقمية للتعريف بيا وعرض مهاراتي.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">تصميم</span></div></div></article>
-<article class="card project"><div class="projectart">🏎️</div><div class="projectbody"><h3>لعبة سباق 3D</h3><p>فكرة لعبة سيارات سريعة بعالم مليان ألوان وحركة.</p><div class="tags"><span class="tag">ألعاب</span><span class="tag">3D</span><span class="tag">إبداع</span></div></div></article>
-<article class="card project"><div class="projectart">🎮</div><div class="projectbody"><h3>ركن الألعاب</h3><p>تجارب تفاعلية بسيطة تشتغل مباشرة من المتصفح.</p><div class="tags"><span class="tag">ويب</span><span class="tag">تفاعل</span><span class="tag">تجربة</span></div></div></article>
-</div></div></section>
-<section id="certificates"><div class="wrap"><h2 class="section-title">شهاداتي <span class="gradient">🏅</span></h2><p class="sub">الشهادات والدورات التي حصلت عليها.</p><div class="cert-grid" id="certList"><article class="card"><h3>📜 شهاداتك هتظهر هنا</h3><p>افتح الإعدادات لإضافة شهاداتك.</p></article></div></div></section>
-<section id="contact"><div class="wrap"><h2 class="section-title">خلينا نتواصل 🤝</h2><p class="sub">عندك فكرة أو اقتراح؟ ابعتلي رسالة.</p><div class="contactgrid">
-<div class="card contactlist"><h3>📬 ابعتلي</h3><p>يسعدني أسمع أفكارك أو أعرف رأيك في الموقع.</p><p>📞 <b>الهاتف:</b> <a id="phone1" href="tel:01025474780">01025474780</a> / <a id="phone2" href="tel:01505299711">01505299711</a></p><p>✉️ <b>البريد:</b> <a id="emailLink" href="mailto:abdulrahmanbashir501@gmail.com">abdulrahmanbashir501@gmail.com</a></p><div id="socialLinks" class="socials"></div><small>نموذج الرسالة بيفتح برنامج البريد عندك، ومش بيبعت بيانات لأي سيرفر.</small></div>
-<form class="card form" id="contactForm"><input id="contactName" placeholder="اسمك" required><input id="contactEmail" type="email" placeholder="بريدك الإلكتروني (اختياري)"><textarea id="contactMessage" placeholder="اكتب رسالتك هنا..." required></textarea><button class="btn primary" type="submit">جهّز رسالة ✉</button><div id="formNote" class="note"></div></form>
-</div></div></section>
-</main><footer class="foot"><div class="wrap">صُنع بشغف  Abdulrahman Bashir <span id="year"></span> — خطوة صغيرة لمستقبل كبير.</div></footer>
-<div class="modal" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle"><div class="box">
-<button id="adminClose" class="toggle" style="float:left">✕ إغلاق</button><h2 id="adminTitle">⚙️ إعدادات الموقع</h2>
-<div id="loginPanel"><p>أدخل كلمة مرور لوحة التعديل.</p><label for="adminPassword">كلمة المرور</label><input id="adminPassword" type="password" autocomplete="current-password" placeholder="كلمة المرور"><div class="admin-actions"><button class="btn primary" id="loginBtn">دخول</button></div><p class="note">تنبيه: هذه حماية محلية بسيطة داخل المتصفح وليست تسجيل دخول آمنًا. لا تضع بيانات سرية هنا.</p></div>
-<div id="editorPanel" hidden>
-<p class="note">هذا الإصدار يحفظ البيانات على الجهاز الحالي. استخدم تصدير/استيراد النسخة الاحتياطية لنقل التعديلات يدويًا لجهاز آخر. الحفظ التلقائي بين الأجهزة يحتاج ربط قاعدة بيانات سحابية.</p>
-<div class="grid"><div><label for="editName">الاسم المعروض</label><input id="editName"></div><div><label for="editPhone1">رقم الهاتف الأول</label><input id="editPhone1"></div><div><label for="editPhone2">رقم الهاتف الثاني</label><input id="editPhone2"></div><div><label for="editEmail">البريد الإلكتروني</label><input id="editEmail" type="email"></div>
-<div style="grid-column:1/-1"><label for="editProfileImage">صورتك الشخصية</label><input id="editProfileImage" type="file" accept="image/*"><img id="profilePreview" class="preview" alt="معاينة الصورة" hidden><button class="btn ghost" type="button" id="removeProfileImage">حذف الصورة</button><p class="note">يتم تصغير الصورة قبل الحفظ لتقليل المساحة.</p></div>
-<div style="grid-column:1/-1"><label for="editAbout">نبذة عنك</label><textarea id="editAbout"></textarea></div><div style="grid-column:1/-1"><label for="editSocials">روابط التواصل (كل سطر: الاسم | الرابط)</label><textarea id="editSocials" placeholder="Instagram | https://..."></textarea></div></div>
-<hr style="border-color:#263654;margin:20px 0"><h3>إظهار أو إخفاء الأقسام</h3><div class="grid" id="sectionToggles"></div>
-<hr style="border-color:#263654;margin:20px 0"><h3>الشهادات</h3><div id="adminCerts"></div>
-<div class="grid"><div><label for="certName">اسم الشهادة</label><input id="certName" placeholder="مثال: أساسيات البرمجة"></div><div><label for="certIssuer">الجهة المانحة</label><input id="certIssuer" placeholder="الجهة المانحة"></div><div><label for="certDate">تاريخ الحصول عليها</label><input id="certDate" placeholder="مثال: أكتوبر 2026"></div><div><label for="certImage">صورة الشهادة (اختياري)</label><input id="certImage" type="file" accept="image/*"></div></div>
-<div class="admin-actions"><button class="btn ghost" id="addCert">+ إضافة شهادة</button></div>
-<div class="admin-actions"><button class="btn primary" id="saveSettings">حفظ التغييرات</button><button class="btn ghost" id="exportSettings">تصدير نسخة احتياطية</button><label class="btn ghost" for="importSettings" style="cursor:pointer">استيراد نسخة احتياطية</label><input id="importSettings" type="file" accept="application/json,.json" hidden><button class="btn ghost danger" id="resetSettings">إعادة ضبط</button></div><p id="saveNote" class="note" aria-live="polite"></p>
-</div></div></div>
-<div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="عرض الشهادة" style="z-index:120"><div class="box" style="width:min(1000px,100%);text-align:center"><button class="toggle" id="imageClose">✕ إغلاق</button><img id="largeCert" alt="الشهادة" style="max-width:100%;max-height:78vh;object-fit:contain;margin-top:12px"></div></div>
-<script>
-(()=>{
-'use strict';
-const KEY='ab_personal_site_v2';
-const defaults={name:'Abdulrahman Bashir',phone1:'01025474780',phone2:'01505299711',email:'abdulrahmanbashir501@gmail.com',about:'أنا عبدالرحمن بشير. دي مساحتي الشخصية لعرض معلوماتي ومشاريعي وشهاداتي وإنجازاتي.',socials:[['Instagram','https://www.instagram.com/abdulrahmanbashir2009/'],['Facebook','https://www.facebook.com/share/19k3R8kptK/'],['TikTok','https://www.tiktok.com/@abdulrahmanbashir1212'],['Telegram','https://t.me/abdulrahmanBashir2009'],['Threads','https://www.threads.com/@abdulrahmanbashir781']],certs:[],hidden:[],profileImage:''};
-const $=id=>document.getElementById(id);
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let data;try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');data={...defaults,...(saved&&typeof saved==='object'?saved:{})};if(!Array.isArray(data.certs))data.certs=[];if(!Array.isArray(data.hidden))data.hidden=[];if(!Array.isArray(data.socials))data.socials=defaults.socials;}catch{data={...defaults};}
-let pendingCertImage='';
-function persist(){try{localStorage.setItem(KEY,JSON.stringify(data));return true}catch(e){return false}}
-function safeUrl(raw){try{const u=new URL(raw);return ['https:','http:'].includes(u.protocol)?u.href:''}catch{return ''}}
-function render(){
-$('displayName').textContent=data.name;$('brandName').textContent=data.name;$('heroName').textContent=data.name.toUpperCase();$('aboutText').textContent=data.about;
-$('phone1').textContent=data.phone1;$('phone1').href='tel:'+data.phone1.replace(/\s/g,'');$('phone2').textContent=data.phone2;$('phone2').href='tel:'+data.phone2.replace(/\s/g,'');$('emailLink').textContent=data.email;$('emailLink').href='mailto:'+data.email;
-$('heroAvatar').innerHTML=data.profileImage?`<img src="${data.profileImage}" alt="الصورة الشخصية لعبدالرحمن">`:'<span>AB</span>';
-$('socialLinks').innerHTML=data.socials.map(([n,u])=>{const url=safeUrl(u);return url?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(n)} ↗</a>`:''}).join('');
-$('certList').innerHTML=data.certs.length?data.certs.map((c,i)=>`<article class="card cert-card"><div class="cert-thumb">${c.image?`<img src="${c.image}" data-viewcert="${i}" alt="${esc(c.name)}">`:'<span class="cert-placeholder">🏅</span>'}</div><div class="cert-body"><h3>${esc(c.name)}</h3><p>${esc(c.issuer||'')}</p><p>${esc(c.date||'')}</p>${c.image?`<div class="cert-actions"><button class="btn ghost" data-viewcert="${i}">عرض الشهادة</button></div>`:''}</div></article>`).join(''):'<article class="card"><h3>📜 شهاداتك هتظهر هنا</h3><p>افتح الإعدادات لإضافة شهاداتك الحقيقية.</p></article>';
-['about','skills','projects','certificates','contact'].forEach(id=>{const el=$(id);if(el)el.style.display=data.hidden.includes(id)?'none':''});
-document.querySelectorAll('[data-viewcert]').forEach(el=>el.addEventListener('click',()=>{const c=data.certs[Number(el.dataset.viewcert)];if(c&&c.image){$('largeCert').src=c.image;$('imageModal').classList.add('show')}}));
-}
-function openAdmin(){$('adminModal').classList.add('show');$('adminPassword').value='';$('loginPanel').hidden=false;$('editorPanel').hidden=true}
-function fillEditor(){$('editProfileImage').value='';$('profilePreview').hidden=!data.profileImage;if(data.profileImage)$('profilePreview').src=data.profileImage;$('editName').value=data.name;$('editPhone1').value=data.phone1;$('editPhone2').value=data.phone2;$('editEmail').value=data.email;$('editAbout').value=data.about;$('editSocials').value=data.socials.map(x=>x.join(' | ')).join('\n');
-$('sectionToggles').innerHTML=[['about','من أنا'],['skills','مهاراتي'],['projects','مشاريعي'],['certificates','شهاداتي'],['contact','التواصل']].map(([id,n])=>`<label><input type="checkbox" data-section="${id}" ${data.hidden.includes(id)?'':'checked'}> ${n}</label>`).join('');renderAdminCerts()}
-function renderAdminCerts(){$('adminCerts').innerHTML=data.certs.map((c,i)=>`<div class="card admin-cert"><span>${esc(c.name)} — ${esc(c.issuer)} ${c.image?'🖼️':''}</span><button class="btn ghost danger" data-delcert="${i}">حذف</button></div>`).join('')||'<p class="note">لا توجد شهادات مضافة حتى الآن.</p>';document.querySelectorAll('[data-delcert]').forEach(b=>b.onclick=()=>{data.certs.splice(Number(b.dataset.delcert),1);renderAdminCerts()})}
-function compressImage(file,max=1000,quality=.78){return new Promise((resolve,reject)=>{if(!file||!file.type.startsWith('image/'))return reject(new Error('اختَر ملف صورة صالحًا'));const url=URL.createObjectURL(file),img=new Image();img.onload=()=>{try{const scale=Math.min(1,max/Math.max(img.width,img.height)),canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(img.width*scale));canvas.height=Math.max(1,Math.round(img.height*scale));const ctx=canvas.getContext('2d');ctx.drawImage(img,0,0,canvas.width,canvas.height);const result=canvas.toDataURL('image/jpeg',quality);URL.revokeObjectURL(url);resolve(result)}catch(e){URL.revokeObjectURL(url);reject(e)}};img.onerror=()=>{URL.revokeObjectURL(url);reject(new Error('تعذر قراءة الصورة'))};img.src=url})}
-$('menu').addEventListener('click',()=>$('links').classList.toggle('open'));$('links').querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>$('links').classList.remove('open')));
-$('theme').addEventListener('click',()=>{document.body.classList.toggle('light');$('theme').textContent=document.body.classList.contains('light')?'🌙':'☀️';try{localStorage.setItem('ab_theme',document.body.classList.contains('light')?'light':'dark')}catch{}});
-try{if(localStorage.getItem('ab_theme')==='light'){document.body.classList.add('light');$('theme').textContent='🌙'}}catch{}
-$('year').textContent='© '+new Date().getFullYear();$('adminOpen').onclick=openAdmin;$('adminClose').onclick=()=>$('adminModal').classList.remove('show');$('adminModal').addEventListener('click',e=>{if(e.target===$('adminModal'))$('adminModal').classList.remove('show')});
-$('loginBtn').onclick=()=>{if($('adminPassword').value==='12122009@@@'){$('loginPanel').hidden=true;$('editorPanel').hidden=false;fillEditor()}else{alert('كلمة المرور غير صحيحة');$('adminPassword').value=''}};
-$('adminPassword').addEventListener('keydown',e=>{if(e.key==='Enter')$('loginBtn').click()});
-$('editProfileImage').addEventListener('change',async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;try{data.profileImage=await compressImage(f,700,.78);$('profilePreview').src=data.profileImage;$('profilePreview').hidden=false;$('saveNote').textContent='تم تجهيز الصورة. اضغط حفظ التغييرات لتثبيتها.'}catch(err){alert(err.message)}});
-$('removeProfileImage').onclick=()=>{data.profileImage='';$('profilePreview').removeAttribute('src');$('profilePreview').hidden=true;$('editProfileImage').value=''};
-$('certImage').addEventListener('change',async e=>{pendingCertImage='';const f=e.target.files&&e.target.files[0];if(!f)return;try{pendingCertImage=await compressImage(f,1400,.78);$('saveNote').textContent='تم تجهيز صورة الشهادة.'}catch(err){alert(err.message)}});
-$('addCert').onclick=()=>{const name=$('certName').value.trim(),issuer=$('certIssuer').value.trim(),date=$('certDate').value.trim();if(!name){alert('اكتب اسم الشهادة أولاً');return}data.certs.push({name,issuer,date,image:pendingCertImage});$('certName').value='';$('certIssuer').value='';$('certDate').value='';$('certImage').value='';pendingCertImage='';renderAdminCerts();$('saveNote').textContent='تمت إضافة الشهادة مؤقتًا؛ اضغط حفظ التغييرات.'};
-$('saveSettings').onclick=()=>{const socials=$('editSocials').value.split('\n').map(l=>l.split('|').map(s=>s.trim())).filter(a=>a.length>=2&&a[0]&&safeUrl(a[1])).map(a=>[a[0],safeUrl(a[1])]);data={...data,name:$('editName').value.trim()||defaults.name,phone1:$('editPhone1').value.trim(),phone2:$('editPhone2').value.trim(),email:$('editEmail').value.trim()||defaults.email,about:$('editAbout').value.trim(),socials,hidden:[...document.querySelectorAll('[data-section]:not(:checked)')].map(x=>x.dataset.section)};
-if(persist()){render();$('saveNote').textContent='تم حفظ التغييرات على هذا الجهاز بنجاح.'}else{$('saveNote').textContent='مساحة التخزين غير كافية. جرّب صورًا أصغر أو صدّر نسخة احتياطية.'}};
-$('exportSettings').onclick=()=>{const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='abdulrahman-site-backup.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)};
-$('importSettings').onchange=async e=>{const f=e.target.files&&e.target.files[0];if(!f)return;try{const imported=JSON.parse(await f.text());if(!imported||typeof imported!=='object'||!Array.isArray(imported.certs))throw new Error('الملف ليس نسخة احتياطية صالحة');data={...defaults,...imported};if(!Array.isArray(data.socials))data.socials=defaults.socials;if(!Array.isArray(data.hidden))data.hidden=[];if(!persist())throw new Error('مساحة التخزين غير كافية');render();fillEditor();$('saveNote').textContent='تم استيراد النسخة الاحتياطية وحفظها.'}catch(err){alert('تعذر استيراد الملف: '+err.message)}finally{e.target.value=''}};
-$('resetSettings').onclick=()=>{if(confirm('إعادة التعديلات للقيم الافتراضية؟ سيتم حذف التغييرات المحفوظة في هذا المتصفح.')){data={...defaults,certs:[],hidden:[],profileImage:''};localStorage.removeItem(KEY);render();fillEditor();$('saveNote').textContent='تمت إعادة الضبط.'}};
-$('contactForm').addEventListener('submit',e=>{e.preventDefault();const name=$('contactName').value.trim(),email=$('contactEmail').value.trim(),message=$('contactMessage').value.trim();const subject=encodeURIComponent('رسالة من الموقع — '+name),body=encodeURIComponent('الاسم: '+name+'\nالبريد: '+email+'\n\nالرسالة:\n'+message);$('formNote').textContent='سيتم فتح تطبيق البريد لإرسال الرسالة.';location.href='mailto:'+encodeURIComponent(data.email)+'?subject='+subject+'&body='+body});
-$('imageClose').onclick=()=>$('imageModal').classList.remove('show');$('imageModal').addEventListener('click',e=>{if(e.target===$('imageModal'))$('imageModal').classList.remove('show')});
-render();
-})();
-</script>
-</body>
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Abdulrahman Bashir | الموقع الشخصي
+  </title>
+  <meta content="الموقع الشخصي لعبدالرحمن بشير." name="description"/>
+  <link rel="stylesheet" href="css/style.css">
+ </head>
+ <body>
+  <header class="nav">
+   <div class="wrap navin">
+    <a class="brand" href="#home">
+     <b>
+      AB
+     </b>
+     Abdulrahman Bashir
+    </a>
+    <nav class="links" id="links">
+     <a href="#home">
+      الرئيسية
+     </a>
+     <a href="#about">
+      من أنا
+     </a>
+     <a href="#skills">
+      مهاراتي
+     </a>
+     <a href="#projects">
+      مشاريعي
+     </a>
+     <a href="#certificates">
+      شهاداتي
+     </a>
+     <a href="#contact">
+      تواصل معي
+     </a>
+    </nav>
+    <div style="display:flex;gap:8px">
+     <button aria-label="تغيير المظهر" class="toggle" id="theme">
+      ☀️
+     </button>
+     <button aria-label="الإعدادات" class="toggle" id="adminOpen">
+      ⚙️ الإعدادات
+     </button>
+     <button aria-label="فتح القائمة" class="menu mobile" id="menu">
+      ☰
+     </button>
+    </div>
+   </div>
+  </header>
+  <main>
+   <section class="wrap hero" id="home" style="border:0">
+    <div>
+     <div class="eyebrow">
+      ✦ أهلاً بيك في عالمي الرقمي
+     </div>
+     <h1>
+      أنا
+      <span class="gradient" id="displayName">
+       Abdulrahman Bashir
+      </span>
+     </h1>
+     <h2 style="font-size:1.3rem;margin:0">
+      مبدع المستقبل
+      <span class="gradient">
+       |
+      </span>
+      صانع أفكار
+     </h2>
+     <p>
+      بحب التكنولوجيا والتصميم وصناعة التجارب الرقمية. دي مساحتي أعرض فيها أفكاري ومشاريعي، وكل حاجة بتعلمني حاجة جديدة.
+     </p>
+     <div class="actions">
+      <a class="btn primary" href="#projects">
+       شوف مشاريعي &swarrow;
+      </a>
+      <a class="btn ghost" href="#contact">
+       تواصل معايا ✉
+      </a>
+     </div>
+    </div>
+    <div class="scene">
+     <div class="orb">
+     </div>
+     <div class="glass">
+      <div class="monogram" id="heroAvatar">
+       <span>
+        AB
+       </span>
+      </div>
+      <h3>
+       ABDULRAHMAN BASHIR
+      </h3>
+      <p>
+       Dream &middot; Code &middot; Create
+      </p>
+     </div>
+     <div class="floatlabel fl1">
+      🚀 أفكار بلا حدود
+     </div>
+     <div class="floatlabel fl2">
+      💡 دايمًا بتعلّم
+     </div>
+    </div>
+   </section>
+   <section id="about">
+    <div class="wrap">
+     <h2 class="section-title">
+      مين أنا؟
+      <span class="gradient">
+       👋
+      </span>
+     </h2>
+     <p class="sub">
+      كل فكرة كبيرة بتبدأ بخطوة صغيرة، وده المكان اللي بحوّل فيه الخيال لحاجة ملموسة.
+     </p>
+     <div class="aboutgrid">
+      <article class="card">
+       <h3>
+        ✨ نبذة عني
+       </h3>
+       <p>
+        أنا عبدالرحمن بشير. دي مساحتي الشخصية لعرض معلوماتي ومشاريعي وشهاداتي وإنجازاتي.
+       </p>
+       <p>
+        الموقع ده بداية تقدر تطورها وتضيف لها إنجازاتك الحقيقية مع الوقت.
+       </p>
+      </article>
+      <article class="card">
+       <h3>
+        🎯 هدفي
+       </h3>
+       <p>
+        أجمع بين الإبداع والتكنولوجيا عشان أصنع حاجات مفيدة، شكلها جميل وتجربتها سهلة على كل الأجهزة.
+       </p>
+       <div class="stats">
+        <div class="stat">
+         <strong>
+          &infin;
+         </strong>
+         أفكار
+        </div>
+        <div class="stat">
+         <strong>
+          24/7
+         </strong>
+         فضول
+        </div>
+        <div class="stat">
+         <strong>
+          🚀
+         </strong>
+         طموح
+        </div>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section id="skills">
+    <div class="wrap">
+     <h2 class="section-title">
+      مهاراتي واهتماماتي
+     </h2>
+     <p class="sub">
+      دي مجالات أقدر أتعلم فيها وأطوّر نفسي &mdash; عدّل النسب حسب مستواك الحقيقي.
+     </p>
+     <div class="skills">
+      <div class="card">
+       <div class="skilltop">
+        <b>
+         تصميم واجهات UI/UX
+        </b>
+        <span>
+         85%
+        </span>
+       </div>
+       <div class="bar">
+        <span style="width:85%">
+        </span>
+       </div>
+      </div>
+      <div class="card">
+       <div class="skilltop">
+        <b>
+         تطوير مواقع الويب
+        </b>
+        <span>
+         80%
+        </span>
+       </div>
+       <div class="bar">
+        <span style="width:80%">
+        </span>
+       </div>
+      </div>
+      <div class="card">
+       <div class="skilltop">
+        <b>
+         أفكار ومشاريع إبداعية
+        </b>
+        <span>
+         90%
+        </span>
+       </div>
+       <div class="bar">
+        <span style="width:90%">
+        </span>
+       </div>
+      </div>
+      <div class="card">
+       <div class="skilltop">
+        <b>
+         تصميم 3D وتجارب تفاعلية
+        </b>
+        <span>
+         70%
+        </span>
+       </div>
+       <div class="bar">
+        <span style="width:70%">
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="projects">
+    <div class="wrap">
+     <h2 class="section-title">
+      مشاريعي
+      <span class="gradient">
+       ⚡
+      </span>
+     </h2>
+     <p class="sub">
+      نماذج تقدر تستبدلها بمشاريعك الفعلية لما تكون جاهزة.
+     </p>
+     <div class="projects">
+      <article class="card project">
+       <div class="projectart">
+        🌐
+       </div>
+       <div class="projectbody">
+        <h3>
+         موقعي الشخصي
+        </h3>
+        <p>
+         مساحة رقمية للتعريف بيا وعرض مهاراتي.
+        </p>
+        <div class="tags">
+         <span class="tag">
+          HTML
+         </span>
+         <span class="tag">
+          CSS
+         </span>
+         <span class="tag">
+          تصميم
+         </span>
+        </div>
+       </div>
+      </article>
+      <article class="card project">
+       <div class="projectart">
+        🏎️
+       </div>
+       <div class="projectbody">
+        <h3>
+         لعبة سباق 3D
+        </h3>
+        <p>
+         فكرة لعبة سيارات سريعة بعالم مليان ألوان وحركة.
+        </p>
+        <div class="tags">
+         <span class="tag">
+          ألعاب
+         </span>
+         <span class="tag">
+          3D
+         </span>
+         <span class="tag">
+          إبداع
+         </span>
+        </div>
+       </div>
+      </article>
+      <article class="card project">
+       <div class="projectart">
+        🎮
+       </div>
+       <div class="projectbody">
+        <h3>
+         ركن الألعاب
+        </h3>
+        <p>
+         تجارب تفاعلية بسيطة تشتغل مباشرة من المتصفح.
+        </p>
+        <div class="tags">
+         <span class="tag">
+          ويب
+         </span>
+         <span class="tag">
+          تفاعل
+         </span>
+         <span class="tag">
+          تجربة
+         </span>
+        </div>
+       </div>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section id="certificates">
+    <div class="wrap">
+     <h2 class="section-title">
+      شهاداتي
+      <span class="gradient">
+       🏅
+      </span>
+     </h2>
+     <p class="sub">
+      الشهادات والدورات التي حصلت عليها.
+     </p>
+     <div class="projects" id="certList">
+      <article class="card">
+       <h3>
+        📜 أضف شهاداتك
+       </h3>
+       <p>
+        افتح الإعدادات لإضافة اسم الشهادة والجهة المانحة وتاريخ الحصول عليها.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section id="contact">
+    <div class="wrap">
+     <h2 class="section-title">
+      خلينا نتواصل 🤝
+     </h2>
+     <p class="sub">
+      عندك فكرة أو اقتراح؟ ابعتلي رسالة من خلال النموذج.
+     </p>
+     <div class="contactgrid">
+      <div class="card contactlist">
+       <h3>
+        📬 ابعتلي
+       </h3>
+       <p>
+        يسعدني أسمع أفكارك أو أعرف رأيك في الموقع.
+       </p>
+       <p>
+        📞
+        <b>
+         الهاتف:
+        </b>
+        <a href="tel:01025474780" id="phone1">
+         01025474780
+        </a>
+        /
+        <a href="tel:01505299711" id="phone2">
+         01505299711
+        </a>
+       </p>
+       <p>
+        ✉️
+        <b>
+         البريد:
+        </b>
+        <a href="mailto:abdulrahmanbashir501@gmail.com" id="emailLink">
+         abdulrahmanbashir501@gmail.com
+        </a>
+       </p>
+       <div class="socials" id="socialLinks">
+       </div>
+       <small>
+        ملاحظة: نموذج الرسالة بيفتح برنامج البريد عندك، ومش بيبعت بيانات لأي سيرفر.
+       </small>
+      </div>
+      <form class="card form" id="contactForm">
+       <input autocomplete="name" id="name" placeholder="اسمك" required=""/>
+       <input autocomplete="email" id="email" placeholder="بريدك الإلكتروني (اختياري)" type="email"/>
+       <textarea id="message" maxlength="5000" placeholder="اكتب رسالتك هنا..." required=""></textarea>
+       <button class="btn primary" type="submit">
+        جهّز رسالة ✉
+       </button>
+       <div id="formNote" style="color:var(--muted);font-size:.85rem">
+       </div>
+      </form>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="foot">
+   <div class="wrap">
+    صُنع بشغف ✦ El Pod
+    <span id="year">
+    </span>
+    &mdash; خطوة صغيرة لمستقبل كبير.
+   </div>
+  </footer>
+  <script src="js/script.js" defer></script>
+  
+  <div aria-labelledby="adminTitle" aria-modal="true" class="admin-modal" id="adminModal" role="dialog">
+   <div class="admin-box">
+    <button class="toggle" id="adminClose" style="float:left" type="button">
+     ✕ إغلاق
+    </button>
+    <h2 id="adminTitle">
+     ⚙️ إعدادات الموقع
+    </h2>
+    <div id="loginPanel">
+     <p>
+      أدخل كلمة مرور الإعدادات.
+     </p>
+     <label>
+      كلمة المرور
+     </label>
+     <input autocomplete="current-password" id="adminPassword" placeholder="كلمة المرور" type="password"/>
+     <div class="admin-actions">
+      <button class="btn primary" id="loginBtn">
+       دخول
+      </button>
+     </div>
+     <p class="admin-note">
+      تنبيه: كلمة المرور هنا تحمي لوحة التعديل داخل المتصفح فقط، وليست حماية خادمية.
+     </p>
+    </div>
+    <div hidden="" id="editorPanel">
+     <p class="admin-note">
+      التغييرات تُحفظ في هذا المتصفح فقط. احتفظ بنسخة احتياطية، ولا تضع معلومات سرية في موقع عام.
+     </p>
+     <div class="admin-grid">
+      <div>
+       <label>
+        الاسم المعروض
+       </label>
+       <input id="editName"/>
+      </div>
+      <div>
+       <label>
+        رقم الهاتف الأول
+       </label>
+       <input id="editPhone1"/>
+      </div>
+      <div>
+       <label>
+        رقم الهاتف الثاني
+       </label>
+       <input id="editPhone2"/>
+      </div>
+      <div>
+       <label>
+        البريد الإلكتروني
+       </label>
+       <input id="editEmail" type="email"/>
+      </div>
+      <div style="grid-column:1/-1">
+       <label>
+        صورتك الشخصية (اختَر صورة من جهازك)
+       </label>
+       <input accept="image/*" id="editProfileImage" type="file"/>
+       <img alt="معاينة الصورة الشخصية" class="profile-preview" hidden="" id="profilePreview"/>
+       <button class="btn ghost" id="removeProfileImage" type="button">
+        حذف الصورة الشخصية
+       </button>
+       <p class="admin-note">
+        يتم تصغير الصورة لتناسب التخزين في هذا المتصفح.
+       </p>
+      </div>
+      <div style="grid-column:1/-1">
+       <label>
+        نبذة عنك
+       </label>
+       <textarea id="editAbout"></textarea>
+      </div>
+      <div style="grid-column:1/-1">
+       <label>
+        روابط التواصل (كل رابط في سطر بهذا الشكل: الاسم | الرابط)
+       </label>
+       <textarea id="editSocials" placeholder="Instagram | https://..."></textarea>
+      </div>
+     </div>
+     <hr style="border-color:#263654;margin:20px 0"/>
+     <h3>
+      إظهار أو إخفاء الأقسام
+     </h3>
+     <div class="admin-grid" id="sectionToggles">
+     </div>
+     <hr style="border-color:#263654;margin:20px 0"/>
+     <h3>
+      الشهادات
+     </h3>
+     <div id="adminCerts">
+     </div>
+     <div class="admin-grid">
+      <div>
+       <label>
+        اسم الشهادة
+       </label>
+       <input id="certName" placeholder="مثال: أساسيات البرمجة"/>
+      </div>
+      <div>
+       <label>
+        الجهة المانحة / التاريخ
+       </label>
+       <input id="certIssuer" placeholder="الجهة &mdash; 2026"/>
+      </div>
+     </div>
+     <div class="admin-actions">
+      <button class="btn ghost" id="addCert">
+       + إضافة شهادة
+      </button>
+     </div>
+     <div class="admin-actions">
+      <button class="btn primary" id="saveSettings">
+       حفظ التغييرات
+      </button>
+      <button class="btn ghost" id="exportSettings">
+       تصدير نسخة احتياطية
+      </button>
+      <button class="btn ghost danger" id="resetSettings">
+       إعادة ضبط التعديلات
+      </button>
+     </div>
+     <p aria-live="polite" class="admin-note" id="saveNote">
+     </p>
+    </div>
+   </div>
+  </div>
+  
+ </body>
 </html>
