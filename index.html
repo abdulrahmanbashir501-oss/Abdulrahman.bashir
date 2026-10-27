@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark" style="color-scheme: dark;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdulrahman Bashir – مطور ويب</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&amp;family=Caveat:wght@500&amp;display=swap">
+<style>
+:root{--bg:#070b1c;--panel:#0e1530;--line:#1d2a55;--ink:#eef1ff;--mute:#a3acd0;--p1:#7b4dff;--p2:#2f8bff;--nav:rgba(7,11,28,.85);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="dark"]){color-scheme:dark light}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef1fb;--panel:#fff;--line:#cdd5ef;--ink:#10163a;--mute:#4e587f;--nav:rgba(238,241,251,.88)}}
+:root[data-theme="light"]{--bg:#eef1fb;--panel:#fff;--line:#cdd5ef;--ink:#10163a;--mute:#4e587f;--nav:rgba(238,241,251,.88)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.9 Cairo,Tahoma,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.3rem}
+.grad{background:linear-gradient(90deg,var(--p1),var(--p2));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{position:sticky;top:0;z-index:5;background:var(--nav);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:800;color:var(--ink);text-decoration:none;direction:ltr}
+.logo b{display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;font-size:.9rem}
+nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--mute);text-decoration:none;font-weight:600;font-size:.95rem}
+nav ul a:hover{color:var(--p2)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--p2);outline-offset:2px}
+.hero{position:relative;overflow:hidden;min-height:480px;display:flex;align-items:center;background:linear-gradient(to left,rgba(7,11,28,.9) 0%,rgba(7,11,28,.6) 50%,rgba(7,11,28,.2) 100%),url(hero.jpg) center/cover no-repeat,#0b1030;color:#eef1ff}
+.hero svg{position:absolute;inset:auto 0 0 0;width:100%;height:46%}
+.hero .wrap{position:relative;padding-block:3rem}
+.hero h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:1.15;font-weight:800;margin:.2rem 0;direction:ltr;text-align:right}
+.hero .role{font-size:1.5rem;font-weight:600;margin:0}
+.hero p{max-width:30em;margin:.7rem 0 0;color:#cfd5f5}
+.btns{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.6rem}
+.btn{display:inline-block;padding:.65rem 1.7rem;border-radius:10px;text-decoration:none;color:#fff;background:linear-gradient(90deg,var(--p1),var(--p2));border:0;font:700 1rem Cairo,sans-serif;cursor:pointer}
+.btn.o{background:rgba(7,11,28,.4);border:1.5px solid var(--p1)}
+.motto{position:absolute;inset-inline-start:42%;top:18%;font:500 2.1rem/1.1 Caveat,cursive;color:#c9c3ff;transform:rotate(-8deg);direction:ltr;opacity:.9}
+section{padding:3.2rem 0;border-top:1px solid var(--line)}
+h2{font-size:1.8rem;font-weight:800;margin:0 0 1.2rem}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.about{display:grid;grid-template-columns:230px 1fr;gap:2rem;align-items:start}
+.photo{aspect-ratio:3/4;border-radius:14px;border:3px solid var(--p1);box-shadow:0 0 28px rgba(123,77,255,.55);background:linear-gradient(160deg,#1b1458,#0e1530);display:grid;place-items:center;font-size:3rem;font-weight:800;color:#8d96c8;overflow:hidden}
+.photo img,.cimg{width:100%;height:100%;object-fit:cover;object-position:top}
+.stats{display:flex;gap:2rem;margin-top:1.2rem}
+.stats div{text-align:center}.stats b{display:block;font-size:1.6rem}.stats span{color:var(--mute);font-size:.88rem}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.sk{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.7rem 1rem;position:relative}
+.sk .r{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600}
+.bar{height:8px;border-radius:9px;background:var(--line);margin-top:.4rem;overflow:hidden}
+.bar i{display:block;height:100%;width:var(--w);border-radius:9px;background:linear-gradient(90deg,var(--p1),var(--p2));animation:fill 1.6s ease-out both}
+@keyframes fill{from{width:0}}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}
+.card .th{height:140px;background:linear-gradient(135deg,#2a1a7a,#2f8bff 60%,#e8683d)}
+.card:nth-child(2n) .th{background:linear-gradient(135deg,#0b2a5c,#7b4dff 60%,#ff5d9e)}
+.card:nth-child(3n) .th{background:linear-gradient(135deg,#13403a,#2f8bff 70%,#7b4dff)}
+.card h3{margin:.8rem 1rem .1rem;font-size:1.05rem}.card p{margin:0 1rem;color:var(--mute);font-size:.88rem;line-height:1.6}
+.tags{padding:.8rem 1rem 1rem;direction:ltr;font-size:.78rem;color:var(--mute)}
+.certs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:1rem}
+.certs li{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;border-inline-start:4px solid var(--p1);position:relative}
+.certs .cimg{height:auto;aspect-ratio:1100/777;display:block;object-fit:contain;background:#fff}.certs .tx{padding:1rem 1.2rem}.certs b{display:block}.certs .tx span{color:var(--mute);font-size:.88rem}
+form{display:grid;gap:.8rem}
+input,textarea{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:.7rem 1rem;color:var(--ink);font:400 1rem Cairo,sans-serif}
+.info a{display:block;color:var(--ink);margin:.2rem 0;direction:ltr;text-align:right}
+footer{border-top:1px solid var(--line);padding:1.2rem 0 5rem;color:var(--mute);font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;align-items:center}
+#lock{background:none;border:1px solid var(--line);color:var(--mute);border-radius:8px;padding:.2rem .8rem;cursor:pointer;font:400 .85rem Cairo,sans-serif}
+[contenteditable]{outline:1px dashed var(--p2);border-radius:4px;min-width:1.5em;display:inline-block;-webkit-text-fill-color:currentColor}
+.hero .grad [contenteditable]{-webkit-text-fill-color:#9db4ff}
+.x{position:absolute;top:6px;inset-inline-end:6px;z-index:2;background:#d33;color:#fff;border:0;border-radius:6px;cursor:pointer;width:26px;height:26px}
+.add,.up{display:inline-block;margin-top:.8rem;background:var(--panel);color:var(--ink);border:1px dashed var(--p2);border-radius:8px;padding:.3rem .9rem;cursor:pointer;font:600 .85rem Cairo,sans-serif}
+.up input{display:none}
+#bar{position:fixed;inset:auto 0 0 0;z-index:9;background:var(--panel);border-top:2px solid var(--p1);padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom,0px));display:flex;gap:.8rem;align-items:center;justify-content:center;flex-wrap:wrap}
+#pw{position:fixed;inset:0;z-index:10;background:rgba(0,0,0,.6);display:grid;place-items:center}
+#pw div{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.4rem;display:grid;gap:.8rem;width:min(320px,90vw)}
+[hidden]{display:none!important}
+@media (max-width:860px){.two,.about{grid-template-columns:1fr}.photo{max-width:220px}nav ul{display:none}.motto{display:none}}
+@media (prefers-reduced-motion:reduce){.bar i{animation:none}}
+.soc{display:flex;gap:.7rem;margin-top:1rem;direction:ltr}.soc a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--ink);margin:0}.soc a:hover{border-color:var(--p2);color:var(--p2)}.soon{grid-column:1/-1;margin:0;padding:2.5rem 1rem;text-align:center;border:1px dashed var(--line);border-radius:14px;color:var(--mute);font-size:1.2rem}
+.vis{display:inline-block;margin:0 1rem 1rem;color:var(--p2);font-weight:600;text-decoration:none}.vis:hover{text-decoration:underline}
+#lock{display:none}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#home"><b>AB</b>Abdulrahman Bashir</a>
+  <ul><li><a href="#home">الرئيسية</a></li><li><a href="#about">من أنا</a></li><li><a href="#skills">مهاراتي</a></li><li><a href="#projects">مشاريعي</a></li><li><a href="#certs">شهاداتي</a></li><li><a href="#contact">تواصل معي</a></li></ul>
+</div></nav>
+<div id="app"></div>
+<footer><div class="wrap"><span>صُمم بحب .. لمستقبل أفضل</span><span dir="ltr">© 2026 Abdulrahman Bashir</span><button id="lock" type="button">🔒 تعديل الموقع</button></div></footer>
+<div id="bar" hidden=""><span id="msg">تم رفع الصورة، اضغط حفظ</span><button class="btn" id="save" type="button">حفظ التعديلات</button><button class="btn o" id="cancel" type="button">إلغاء</button></div>
+<div id="pw" hidden=""><div><b>كلمة السر</b><input type="password" id="pwi" autocomplete="off" aria-label="كلمة السر"><span id="pwe" style="color:#ff7b72" hidden="">كلمة السر غلط</span><button class="btn" id="pwok" type="button">دخول</button><button class="btn o" id="pwno" type="button">إلغاء</button></div></div>
+<script type="application/json" id="data">{"t": {"hello": "مرحباً، أنا", "name": "Abdulrahman Bashir", "role": "مطور ويب | مبرمج", "intro": "بحوّل الأفكار لتجارب رقمية بتشتغل. بحب البرمجة وبتعلم كل يوم حاجة جديدة.", "about": "أنا عبدالرحمن بشير، بحب البرمجة وبحب أشوف اللي بكتبه بيشتغل. اكتب هنا نبذة عنك بكلامك.", "cta": "عندك فكرة أو مشروع؟ أو حتى مجرد سلام؟ يسعدني تكلمني.", "email": "abdulrahmanbashir501@gmail.com", "p1": "01025474780", "p2": "01505299711", "soon": "ستكون متاحة قريباً"}, "photo": "photo.jpg", "stats": [{"n": "2", "l": "مشاريع مكتملة"}, {"n": "3", "l": "شهادات"}, {"n": "0+", "l": "أفكار جديدة"}], "skills": [{"n": "HTML", "v": 90}, {"n": "CSS", "v": 85}, {"n": "JavaScript", "v": 80}, {"n": "Git", "v": 70}, {"n": "حل المشكلات", "v": 85}, {"n": "مهارة جديدة", "v": 75}], "projects": [{"title": "My Words | قاموسي الشخصي", "desc": "قاموس شخصي لتعلّم كلمات الإنجليزية: أضف كلماتك ومعانيها، وراجعها في جلسة حفظ، واختبر نفسك.", "tags": ["HTML", "CSS", "JavaScript"], "url": "https://abdulrahmanbashir501-oss.github.io/English-study-/"}, {"title": "Visual Studio Code (نسخة الموبايل)", "desc": "محرر أكواد يشتغل في المتصفح بواجهة VS Code: مستكشف ملفات، محرر، تشغيل المشروع، وطرفية.", "tags": ["HTML", "CSS", "JavaScript"], "url": "https://claude.ai/artifact/U9KAqfySgT19cvaYuXuf2q"}], "certs": [{"n": "JavaScript Level 1", "s": "TOFAS، 27 أبريل 2026", "img": "cert-1.jpg"}, {"n": "JavaScript Level 2", "s": "TOFAS، 14 يوليو 2026", "img": "cert-2.jpg"}, {"n": "JavaScript Level 3", "s": "TOFAS، 30 يوليو 2026", "img": "cert-3.jpg"}]}</script>
+<script>
+var D=JSON.parse(document.getElementById('data').textContent),edit=false,H='7a397ff567849fe7097b2e121fbde416f1b89780a233c0318828646bf071241c';
+var $=function(i){return document.getElementById(i)};
+var e=function(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+function K(k,v){return '<span data-k="'+k+'"'+(edit?' contenteditable="plaintext-only"':'')+'>'+e(v)+'</span>'}
+function X(p){return edit?'<button class="x" type="button" data-rm="'+p+'" aria-label="حذف">×</button>':''}
+var SOC=[['threads','https://www.threads.com/@abdulrahmanbashir781','<text x="12" y="17" text-anchor="middle" font-size="16" font-weight="700" fill="currentColor" stroke="none">@</text>'],['telegram','https://t.me/abdulrahmanBashir2009','<path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/>'],['tiktok','https://www.tiktok.com/@abdulrahmanbashir1212','<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>'],['facebook','https://www.facebook.com/share/19k3R8kptK/','<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>'],['instagram','https://www.instagram.com/abdulrahmanbashir2009','<rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/>']];
+function soc(){return '<div class="soc">'+SOC.map(function(x){return '<a href="'+x[1]+'" target="_blank" rel="noopener" aria-label="'+x[0]+'"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+x[2]+'</svg></a>'}).join('')+'</div>'}
+function render(){
+var t=D.t,h='';
+h+='<header class="hero" id="home"><div class="wrap"><p style="margin:0;font-weight:600">'+K('t.hello',t.hello)+'</p><h1 class="grad">'+K('t.name',t.name)+'</h1><p class="role">'+K('t.role',t.role)+'</p><p>'+K('t.intro',t.intro)+'</p><div class="btns"><a class="btn" href="#contact">تواصل معي</a><a class="btn o" href="#projects">شوف مشاريعي</a></div></div></header>';
+h+='<section id="about"><div class="wrap two"><div><h2>من أنا</h2><div class="about"><div><div class="photo">'+(D.photo?'<img src="'+D.photo+'" alt="Abdulrahman Bashir">':'ع ب')+'</div>'+(edit?'<label class="up">تغيير الصورة<input type="file" accept="image/*" id="ph"></label>':'')+'</div><div><p style="margin:0">'+K('t.about',t.about)+'</p><div class="stats">';
+D.stats.forEach(function(s,i){h+='<div><b>'+K('stats.'+i+'.n',s.n)+'</b><span>'+K('stats.'+i+'.l',s.l)+'</span></div>'});
+h+='</div></div></div></div><div id="skills"><h2>مهاراتي</h2><div class="skills">';
+D.skills.forEach(function(s,i){h+='<div class="sk">'+X('skills.'+i)+'<div class="r"><span>'+K('skills.'+i+'.n',s.n)+'</span><span>'+K('skills.'+i+'.v',s.v)+'%</span></div><div class="bar"><i style="--w:'+Math.min(100,+s.v||0)+'%"></i></div></div>'});
+h+='</div>'+(edit?'<button class="add" type="button" data-add="skills">+ مهارة</button>':'')+'</div></div></section>';
+h+='<section id="projects"><div class="wrap"><h2>أعمالي ومشاريعي</h2><div class="cards">';
+D.projects.forEach(function(p,i){h+='<div class="card">'+X('projects.'+i)+'<div class="th"></div><h3>'+K('projects.'+i+'.title',p.title)+'</h3><p>'+K('projects.'+i+'.desc',p.desc)+'</p><div class="tags">'+K('projects.'+i+'.tags',p.tags.join(', '))+'</div>'+(edit?'<div class="tags">رابط: '+K('projects.'+i+'.url',p.url||'')+'</div>':(p.url?'<a class="vis" href="'+e(p.url)+'" target="_blank" rel="noopener">شوف المشروع ↗</a>':''))+'</div>'});
+if(!D.projects.length)h+='<p class="soon">'+K('t.soon',t.soon||'ستكون متاحة قريباً')+'</p>';
+h+='</div>'+(edit?'<button class="add" type="button" data-add="projects">+ مشروع</button>':'')+'</div></section>';
+h+='<section id="certs"><div class="wrap"><h2>شهاداتي</h2><ul class="certs">';
+D.certs.forEach(function(c,i){h+='<li>'+X('certs.'+i)+(c.img?'<img class="cimg" src="'+e(c.img)+'" alt="">':'')+'<div class="tx"><b>'+K('certs.'+i+'.n',c.n)+'</b><span>'+K('certs.'+i+'.s',c.s)+'</span>'+(edit?'<br><label class="up">'+(c.img?'تغيير الصورة':'رفع صورة الشهادة')+'<input type="file" accept="image/*" data-img="'+i+'"></label>':'')+'</div></li>'});
+h+='</ul>'+(edit?'<button class="add" type="button" data-add="certs">+ شهادة</button>':'')+'</div></section>';
+var tel=function(p){return 'tel:+2'+p.replace(/\D/g,'')};
+h+='<section id="contact"><div class="wrap two"><div class="info"><h2>تواصل معي</h2><p style="margin-top:0;color:var(--mute)">'+K('t.cta',t.cta)+'</p>'+(edit?'<div dir="ltr">'+K('t.email',t.email)+'<br>'+K('t.p1',t.p1)+'<br>'+K('t.p2',t.p2)+'</div>':'<a href="mailto:'+e(t.email)+'">'+e(t.email)+'</a><a href="'+tel(t.p1)+'">'+e(t.p1)+'</a><a href="'+tel(t.p2)+'">'+e(t.p2)+'</a>')+soc()+'</div><form action="mailto:'+e(t.email)+'" method="post" enctype="text/plain"><input name="name" placeholder="الاسم" aria-label="الاسم"><input name="email" type="email" placeholder="البريد الإلكتروني" aria-label="البريد الإلكتروني"><textarea name="message" rows="4" placeholder="الرسالة" aria-label="الرسالة"></textarea><button class="btn" type="submit">إرسال</button></form></div></section>';
+$('app').innerHTML=h;$('bar').hidden=!edit}
+function put(o,p,v){var a=p.split('.'),i;for(i=0;i<a.length-1;i++)o=o[a[i]];var k=a[a.length-1];
+if(k==='tags')v=v.split(/[,،]/).map(function(x){return x.trim()}).filter(Boolean);else if(k==='v')v=Math.max(0,Math.min(100,parseInt(v)||0));o[k]=v}
+function collect(){document.querySelectorAll('[data-k]').forEach(function(el){put(D,el.dataset.k,el.textContent.trim())})}
+var NEW={skills:{n:'مهارة جديدة',v:70},projects:{title:'اسم المشروع',desc:'سطر عن المشروع.',tags:['Tech'],url:''},certs:{n:'اسم الشهادة',s:'الجهة المانحة، السنة',img:''}};
+function shrink(f){return createImageBitmap(f).then(function(b){var w=Math.min(480,b.width),c=document.createElement('canvas');c.width=w;c.height=Math.round(b.height*w/b.width);c.getContext('2d').drawImage(b,0,0,c.width,c.height);return c.toDataURL('image/jpeg',.8)})}
+function msg(s){$('msg').textContent=s}
+document.addEventListener('click',function(ev){var t=ev.target;
+if(t.dataset&&t.dataset.rm){collect();var a=t.dataset.rm.split('.');D[a[0]].splice(+a[1],1);render()}
+else if(t.dataset&&t.dataset.add){collect();D[t.dataset.add].push(JSON.parse(JSON.stringify(NEW[t.dataset.add])));render()}});
+document.addEventListener('change',function(ev){var t=ev.target,f=t.files&&t.files[0];if(!f)return;
+if(t.id==='ph'){collect();shrink(f).then(function(u){D.photo=u;render()})}
+else if(t.dataset.img!==undefined){collect();msg('جاري رفع الصورة...');claude.use('assets').then(function(A){if(!A)throw 0;return A.upload(f)}).then(function(r){D.certs[+t.dataset.img].img=r.url;render();msg('تم رفع الصورة، اضغط حفظ')}).catch(function(){msg('تعذر رفع الصورة. افتح الصفحة كمالك الموقع.')})}});
+$('lock').onclick=function(){if(edit)return;$('pwi').value='';$('pwe').hidden=true;$('pw').hidden=false;$('pwi').focus()};
+$('pwno').onclick=function(){$('pw').hidden=true};
+function enter(){crypto.subtle.digest('SHA-256',new TextEncoder().encode($('pwi').value)).then(function(b){var x=Array.from(new Uint8Array(b)).map(function(n){return n.toString(16).padStart(2,'0')}).join('');if(x===H){$('pw').hidden=true;edit=true;render()}else $('pwe').hidden=false})}
+$('pwok').onclick=enter;$('pwi').onkeydown=function(ev){if(ev.key==='Enter')enter()};
+$('cancel').onclick=function(){D=JSON.parse($('data').textContent);edit=false;render()};
+$('save').onclick=function(){collect();$('data').textContent=JSON.stringify(D);edit=false;render();$('bar').hidden=true;
+var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+claude.use('artifact').then(function(A){if(!A)throw 0;return A.publish(html)}).catch(function(){edit=true;render();msg('تعذر الحفظ. لازم تفتح الصفحة بحسابك (مالك الموقع).')})};
+render();
+</script>
+
+
+</body></html>
